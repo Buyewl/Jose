@@ -1,0 +1,19 @@
+name = "jean"
+main = "build/worker/shim.mjs"
+compatibility_date = "2024-05-23"
+minify = true
+
+[[kv_namespaces]]
+binding = "el"
+id = "bf30677d742641da921f8c0bdd9aff68"
+
+[build]
+command = "cargo install worker-build && worker-build --release"
+
+[env.dev]
+build = { command = "cargo install worker-build && worker-build --dev" }
+
+[vars]
+UUID = "1f6c691d-69a9-403b-b7b9-9c8dc8dc9df0"
+MAIN_PAGE_URL = "https://raw.githubusercontent.com/Buyewl/Jose/web/index.html"
+SUB_PAGE_URL = "https://raw.githubusercontent.com/Buyewl/Jose/web/sub.html"
