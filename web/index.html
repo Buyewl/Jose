@@ -1,82 +1,399 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MyWebsite</title>
-    <!-- Tailwind + DaisyUI CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body class="bg-base-100 text-base-content">
-    <!-- Navbar -->
-    <div class="navbar bg-base-200 px-6 fixed">
-      <div class="flex-1">
-        <a class="btn btn-ghost text-xl">MyWebsite</a>
-      </div>
-      <div class="flex-none">
-        <ul class="menu menu-horizontal px-1">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1.0">
+  <meta name="description" content=
+  "Portofolio 3D interaktif Montyer, superhero web developer.">
+  <meta name="keywords" content=
+  "portofolio, web developer, 3D, interaktif, Montyer">
+  <meta name="author" content="Ilyasa Rosada">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Ilyasa Rosada - Comic Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com"
+  crossorigin="">
+  <link href=
+  "https://fonts.googleapis.com/css2?family=Bangers&amp;family=Comic+Neue:wght@400;700&amp;display=swap"
+  rel="stylesheet">
+  <script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+  <link rel="stylesheet" href=
+  "https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href=
+  "https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;display=swap"
+  rel="stylesheet">
+</head>
+<body>
+  <div class="flash-effect"></div>
+  <div class="parallax-layer parallax-dots"></div>
+  <div class="parallax-layer parallax-stars"></div>
+  <div class="parallax-layer parallax-shapes">
+    <div class="parallax-shape" style="top: 10%; left: 5%;">
+      POW!
+    </div>
+    <div class="parallax-shape" style="top: 30%; left: 80%;">
+      BAM!
+    </div>
+    <div class="parallax-shape" style="top: 60%; left: 15%;">
+      ZOOM!
+    </div>
+    <div class="parallax-shape" style="top: 80%; left: 70%;">
+      WHACK!
+    </div>
+  </div>
+  <div class="comic-container">
+    <h1 class="comic-title">Ilyasa Rosada</h1>
+    <div class="speech-bubble">
+      <p>Ilyasa: "With great code comes great responsibility!"</p>
+    </div>
+    <div class="comic-nav">
+      <div class="nav-links">
+        <button id="darkModeToggle" class="nav-button" onclick=
+        "toggleDarkMode()"></button>
       </div>
     </div>
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero min-h-screen bg-base-100">
-      <div class="hero-content text-center">
-        <div class="max-w-md">
-          <h1 class="text-5xl font-bold">Welcome to MyWebsite</h1>
-          <p class="py-6">Build beautiful websites effortlessly using Tailwind and DaisyUI.</p>
-          <a href="#features" class="btn btn-primary">Get Started</a>
+    <section id="about" class="comic-grid">
+      <div class="panel panel-large panel-blue">
+        <div class="action-text whoosh">
+          BOOM!
+        </div>
+        <div class="hero-image"><img src="IMG-20250320-WA0032.jpg"
+        alt="Hero Icon" class="hero-avatar"></div>
+        <div class="speech-bubble">
+          <h2 id="typing-text"></h2>
+          <p>A student at SMKN 1 Tangerang, majoring in Network and
+          Computer Engineering (TJKT), class of 2024–2027. Born in
+          2008, full of energy and ideas!</p>
+        </div>
+      </div>
+      <div class="panel panel-small panel-purple">
+        <h3>About Me</h3>
+        <p>Hello everyone. My name is Ilyasa Rosada. I am currently
+        pursuing my education at SMKN 1 Tangerang, majoring in
+        Computer and Network Engineering (TJKT). At school, I am
+        actively involved in student organizations and frequently
+        participate in various school activities. In addition, I
+        focus on personal development and have proven myself by
+        joining several competitions. I also often serve as an IT
+        support, helping to repair and maintain computers in the
+        school laboratories for the DKV, AKL, and MPLB
+        departments.</p>
+      </div>
+      <div class="panel panel-small panel-yellow">
+        <h3>My Mission</h3>
+        <p>Building the digital future one line of code at a
+        time!</p>
+      </div>
+    </section>
+    <div class="page-transition">
+      <div class="page-corner"></div>
+    </div>
+    <section id="skills" class="comic-grid">
+      <div class="panel panel-medium panel-green">
+        <h2>My Superpowers</h2>
+        <div class="action-text whoosh">
+          ZAP!
+        </div>
+        <div class="skills-container">
+          <div class="skill-icon">
+            PHP
+          </div>
+          <div class="skill-icon">
+            JS
+          </div>
+          <div class="skill-icon">
+            C++
+          </div>
+          <div class="skill-icon">
+            Dart
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-medium panel-orange">
+        <h2>Tools I Wield</h2>
+        <div class="skills-container">
+          <div class="skill-icon">
+            Laravel
+          </div>
+          <div class="skill-icon">
+            React
+          </div>
+          <div class="skill-icon">
+            Flutter
+          </div>
+          <div class="skill-icon">
+            Git
+          </div>
+        </div>
+        <div class="action-text whoosh">
+          WHAM!
+        </div>
+      </div>
+      <div class="panel panel-small panel-turquoise">
+        <h3>Tech Evolution</h3>
+        <ul style="list-style-type: disc; padding-left: 15px;">
+          <li>Started with HTML & CSS</li>
+          <li>Mastered PHP & JavaScript</li>
+          <li>Jumped into Laravel & React</li>
+          <li>Currently learning Flutter & Game Dev with C++</li>
+        </ul>
+        <div class="action-text whoosh">
+          LEVEL UP!
+        </div>
+      </div>
+      <div class="panel panel-small panel-pink">
+        <h3>Fun Fact!</h3>
+        <p>I don't wear glasses! But I do have a laser focus when
+        it comes to coding. 😎</p>
+      </div>
+      <div class="panel panel-small panel-lime">
+        <h3>My Superhero Alter-Ego</h3>
+        <p>Faster than bugs, stronger than lag, here comes...
+        <strong>CodeBlitz!</strong> My digital superhero persona
+        built by AI!</p>
+      </div>
+      <div class="panel panel-small panel-gold">
+        <h3>Side Quests</h3>
+        <p>Exploring IoT with Wokwi and crafting cool browser games
+        like "Denis Digebukin Warga"! 😆</p>
+      </div>
+      <div class="panel panel-small panel-gray">
+        <h3>Favorite Quote</h3>
+        <p>"First, solve the problem. Then, write the code." – John
+        Johnson</p>
+      </div>
+    </section>
+    <div class="page-transition">
+      <div class="page-corner"></div>
+    </div>
+    <section id="achievements" class="comic-grid">
+      <div class="panel panel-large panel-yellow">
+        <h2>Achievements</h2>
+        <div class="certificate">
+          <h3>2nd Place</h3>
+          <h4>Student Coding Competition</h4>
+          <p>City Level – Tangerang, 2025</p>
+        </div><img src="Picsart_25-03-09_00-27-54-064.png" alt=
+        "Komik PNG" class="komik-png">
+        <div class="comic-effect">
+          💥 POW! 💥
+        </div>
+        <div class="action-text whoosh">
+          KAPOW!
+        </div>
+      </div>
+      <div class="panel panel-small panel-red">
+        <h3>Projects</h3>
+        <ul style=
+        "list-style-type: none; padding-left: 10px; transform: translateZ(10px);">
+          <li>✅ School Network Monitoring</li>
+          <li>✅ IT Support</li>
+          <li>✅ Mobile Learning App</li>
+        </ul>
+      </div>
+      <div class="panel panel-small panel-blue">
+        <div class="zoom-content">
+          <h3>Currently Learning</h3>
+          <p>Always expanding my skills with new technologies and
+          frameworks!</p>
         </div>
       </div>
     </section>
-
-    <!-- Features Section -->
-    <section id="features" class="py-16 bg-base-200">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-10">Features</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="card bg-base-100 shadow-xl">
-            <div class="card-body">
-              <h3 class="card-title">Fast Development</h3>
-              <p>Rapidly build and customize your UI with Tailwind CSS utility classes.</p>
+    <div class="page-transition">
+      <div class="page-corner"></div>
+    </div>
+    <section id="timeline" class="comic-grid">
+      <div class="panel panel-large panel-blue">
+        <h2>My Timeline</h2>
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-point"></div>
+            <div class="timeline-content">
+              <h3>2023</h3>
+              <p>First HTML page built</p>
+              <div class="mini-panel">
+                Hello World!
+              </div>
             </div>
           </div>
-          <div class="card bg-base-100 shadow-xl">
-            <div class="card-body">
-              <h3 class="card-title">Beautiful UI</h3>
-              <p>DaisyUI components come styled and ready to use — just plug and play.</p>
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-point"></div>
+            <div class="timeline-content">
+              <h3>2024</h3>
+              <p>Started learning PHP & JavaScript</p>
+              <div class="mini-panel">
+                console.log("Wow!");
+              </div>
             </div>
           </div>
-          <div class="card bg-base-100 shadow-xl">
-            <div class="card-body">
-              <h3 class="card-title">Fully Responsive</h3>
-              <p>Designed with mobile-first responsiveness in mind for all devices.</p>
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-point"></div>
+            <div class="timeline-content">
+              <h3>2024</h3>
+              <p>First school project with Laravel</p>
+              <div class="mini-panel">
+                Route::get('success')
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-point"></div>
+            <div class="timeline-content">
+              <h3>2025</h3>
+              <p>Coding competition winner</p>
+              <div class="mini-panel">
+                🏆 2nd Place!
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-point"></div>
+            <div class="timeline-content">
+              <h3>NOW</h3>
+              <p>Learning Flutter & Game Dev</p>
+              <div class="mini-panel">
+                The adventure continues...
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="action-text whoosh">
+          TIME WARP!
+        </div>
+      </div>
+    </section><!-- 3. Testimonial -->
+    <section id="testimonials" class="comic-grid">
+      <div class="panel panel-large panel-gold">
+        <h2>What Others Say</h2>
+        <div class="testimonials-container">
+          <div class="testimonial" data-aos="flip-left">
+            <div class="quote-marks">
+              "
+            </div>
+            <p class="testimonial-text">Ilyasa is one of the most
+            dedicated students I've had the pleasure of teaching.
+            His problem-solving skills are outstanding!</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                👨‍🏫
+              </div>
+              <div class="testimonial-info">
+                <h4>Pak Budi</h4>
+                <p>IT Teacher, SMKN 1 Tangerang</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial" data-aos="flip-right">
+            <div class="quote-marks">
+              "
+            </div>
+            <p class="testimonial-text">Working with Ilyasa on our
+            school project was fantastic. He always finds creative
+            solutions to technical problems.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                🐧
+              </div>
+              <div class="testimonial-info">
+                <h4>Nauli Skibidi</h4>
+                <p>Project Partner</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial" data-aos="flip-up">
+            <div class="quote-marks">
+              "
+            </div>
+            <p class="testimonial-text">Thanks to Ilyasa's help,
+            our computer lab is running smoothly again. His
+            technical knowledge is impressive!</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                👩‍🎨
+              </div>
+              <div class="testimonial-info">
+                <h4>Ibu Neneng</h4>
+                <p>DKV Department Coordinator</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="action-text whoosh">
+          PRAISE!
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="comic-grid">
+      <div class="panel panel-large panel-turquoise">
+        <h2>Contact Me</h2>
+        <div class="speech-bubble">
+          <p>Want to collaborate on a project or just say hi? Drop
+          me a message!</p>
+        </div>
+        <form class="contact-form" id="contactForm" name=
+        "contactForm">
+          <div class="form-group">
+            <label for="name">Name:</label> <input type="text" id=
+            "name" name="name" required="">
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label> 
+            <textarea id="message" name="message" required=
+            ""></textarea>
+          </div><button type="submit">SEND MESSAGE!</button>
+        </form>
+        <div class="action-text whoosh">
+          MAIL!
+        </div>
+      </div>
+      <div class="panel panel-small panel-purple">
+        <h3>Find Me Online</h3>
+        <div class="social-icon-wrapper">
+          <div class="social-icon" id="instaHover">
+            <div class="social-icon-circle">
+              I
+            </div><span><a href=
+            "https://www.instagram.com/icatruzz_" target="_blank"
+            class="ig-link">Instagram</a></span>
+          </div><!-- Mini Instagram Card -->
+          <div class="mini-instagram" id="instaCard">
+            <div class="mini-header">
+              <img src="pp%20ig.jpeg" class="mini-avatar" alt=
+              "Profile Picture">
+              <div>
+                <strong>@icatruzz_</strong><br>
+                <small>200 Followers • 217 Following</small>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="panel panel-small panel-lime">
+        <h1>ᗪOᗰIՏIᒪI ᗰᗩᑎᗩ?</h1>
+        <p style="margin-top: 15px; transform: translateZ(5px);">
+        Perum 2 Tangerang, Indonesia</p>
+      </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="footer p-10 bg-base-300 text-base-content">
-      <aside>
-        <p>MyWebsite © 2025 - All rights reserved</p>
-      </aside>
-      <nav>
-        <h6 class="footer-title">Social</h6>
-        <div class="grid grid-flow-col gap-4">
-          <a href="#"
-            ><svg xmlns="http://www.w3.org/2000/svg" class="fill-current w-6 h-6" viewBox="0 0 24 24">
-              <path
-                d="M24 4.5a9.9 9.9 0 0 1-2.8.8 5 5 0 0 0 2.2-2.7 9.8 9.8 0 0 1-3.1 1.2 4.9 4.9 0 0 0-8.5 4.5A13.9 13.9 0 0 1 1.6 3.2a4.9 4.9 0 0 0 1.5 6.5A4.8 4.8 0 0 1 .9 9v.1a4.9 4.9 0 0 0 3.9 4.8 5 5 0 0 1-2.2.1 4.9 4.9 0 0 0 4.6 3.4 9.8 9.8 0 0 1-6.1 2.1A10 10 0 0 1 0 20a13.9 13.9 0 0 0 7.5 2.2c9 0 13.9-7.5 13.9-14v-.6A10 10 0 0 0 24 4.5z"
-              /></svg
-          ></a>
-        </div>
-      </nav>
+    <footer>
+      <p><strong>Comic Engine:</strong> HTML, CSS, JavaScript,
+      Sketchfab, AOS</p>
+      <p>Created by Ilyasa Rosada © 2025 – SMKN 1 Tangerang</p>
+      <p>. .</p>
+      <p class="action-text" style=
+      "transform: rotate(-2deg); font-size: clamp(16px, 5vw, 32px);">
+      THE END... or is it?</p>
     </footer>
-  </body>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
