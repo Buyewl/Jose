@@ -1,11 +1,11 @@
-name = "jean"
+name = "jose"
 main = "build/worker/shim.mjs"
 compatibility_date = "2024-05-23"
 minify = true
 
 [[kv_namespaces]]
-binding = "el"
-id = "bf30677d742641da921f8c0bdd9aff68"
+binding = "jose"
+id = "d5b2409e606e417e989acd14e34aec22"
 
 [build]
 command = "cargo install worker-build && worker-build --release"
